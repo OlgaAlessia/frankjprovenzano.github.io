@@ -138,9 +138,9 @@ header {
 /** END Footer **/
 
 /** Home Page **/
-
 video {
-  margin: 1rem;
+  padding: 1rem;
+  position: relative;
 }
 
 .page-template-tpl-home .footer{
