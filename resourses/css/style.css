@@ -152,9 +152,14 @@ video {
   text-align: center;
 }
 
-/* Override bootstrap column paddings */
+.container .gallery-container {
+  color: #35373a;
+  min-height: 100vh;
+  padding: 30px 50px;
+}
+
 .gallery-wrapper .row > div {
-  padding: 2px;
+  padding: 5px;
 }
 
 .gallery-wrapper .lightbox img {
