@@ -1,0 +1,320 @@
+@charset "UTF-8";
+/* Author: quaranta.olga@gmail.com
+Version: 01/2023 */
+
+/* UTILS */
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  background: #200b30 !important;
+  background-repeat: no-repeat;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+b,
+strong,
+.strong {
+  font-weight: 700;
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+h1,
+.h1 {
+  font-family: 'Domain', serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: white !important;
+}
+
+h2,
+.h2 {
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: white;
+}
+
+h3,
+.h3 {
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: #852890 !important;
+}
+
+h4,
+.h4 {
+  font-weight: 400;
+  font-size: 0.6rem;
+  color: #852890;
+}
+
+h5,
+.h5 {
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  color: #852890;
+}
+
+h6,
+.h6 {
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: #852890 !important;
+}
+
+a {
+
+  text-decoration: none !important;
+  background-color: transparent;
+}
+
+a:hover,
+a:active {
+  color: #852890 !important;
+}
+
+.link {
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+
+.center {
+  text-align: center;
+}
+
+.no-scroll {
+  overflow-y: hidden !important;
+  height: 0;
+}
+
+/** Header **/
+header {
+  position: relative;
+  background-color: transparent;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/** END Header **/
+
+
+/** FOOTER **/
+.footer {
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0.5rem;
+  background-color: white;
+  text-align: center;
+  position: relative;
+  color: black;
+  font-size: 10px;
+}
+
+.footer a{
+  font-size: initial;
+}
+
+.smallSize{
+  font-size: 10px !important;
+}
+/** END Footer **/
+
+/** Home Page **/
+video {
+  padding: 1rem;
+  position: relative;
+}
+
+/** END Home Page **/
+
+
+/** gridPicture Page **/
+.center {
+  text-align: center;
+}
+
+/* Override bootstrap column paddings */
+.gallery-wrapper .row > div {
+  padding: 2px;
+}
+
+.gallery-wrapper .lightbox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  position: relative;
+}
+
+.gallery-wrapper .lightbox:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -13px;
+  margin-left: -13px;
+  opacity: 0;
+  color: #fff;
+  font-size: 26px;
+  font-family: 'FontAwesome';
+  content: "\f00e" !important;
+  pointer-events: none;
+  z-index: 9000;
+  transition: 0.4s;
+}
+
+.gallery-wrapper .lightbox:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: rgba(133, 40, 144, 0.7);
+  border-radius: 5px;
+  content: '';
+  transition: 0.4s;
+}
+
+.gallery-wrapper .lightbox:hover:after,
+.gallery-wrapper .lightbox:hover:before {
+  opacity: 1;
+}
+
+.share {
+  font-family: sans-serif;
+  color: black;
+  font-weight: bold;
+  display: inline-block;
+  padding-top: .5em;
+}
+
+.btn {
+  background-color: DodgerBlue !important;
+  border-radius: 5px;
+  border: none !important;
+  color: white !important;
+  padding: 12px 30px;
+}
+
+.btn:hover{
+  background-color: rgb(132, 65, 225) !important;
+}
+
+/** END gridPicture Page **/
+
+.button {
+  align-items: center;
+  background-color: initial;
+  background-image: linear-gradient(#464d55, #25292e);
+  border-radius: 8px;
+  border-width: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .1),0 3px 6px rgba(0, 0, 0, .05);
+  color: white !important;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: translate3d(0, 0, 0);
+  transition: all 150ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  touch-action: manipulation;
+}
+
+.button:hover {
+  box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
+  opacity: .85;
+}
+
+.button:active {
+  outline: 0;
+}
+
+.button:focus {
+  box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
+}
+
+
+/*** MEDIA QUERY ***/
+
+@media (min-width: 768px) {
+
+  html,
+  body {
+    font-size: 17px;
+  }
+
+  .button {
+    padding: 19px 32px;
+  }
+}
+
+
+@media (max-width: 768px) {}
+
+@media (max-width: 991px) {}
+
+
+@media (min-width: 992px) {
+  header {
+    padding: 10px 0;
+  }
+
+}
+
+@media (min-width: 1200px) {
+
+  html,
+  body {
+    font-size: 18px;
+  }
+
+  .h1,
+  h1,
+  .title-h1 {
+    font-size: 2.5rem;
+
+  }
+
+  h2,
+  .h2 {
+    font-size: 1.5rem;
+  }
+
+  h3,
+  .h3 {
+    font-size: 1.25rem;
+  }
+
+  h4,
+  .h4 {
+    font-size: 0.9rem;
+  }
+
+  h5,
+  .h5 {
+    font-size: 0.75rem;
+  }
+
+}
+
+@media (min-width: 1500px) {}
