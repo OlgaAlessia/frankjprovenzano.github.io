@@ -18,14 +18,38 @@ jQuery(document).ready(function($) {
 });
 
 function createCaption(element) {
-    return  element.getElementsByTagName('img')[0].alt +'<button class="m-2 btn" onclick="goToForm(\'' + element.id + '\')"><i class="fa fa-download"></i> Download</button>';
+    return  element.getElementsByTagName('img')[0].alt +'<button class="m-2 btn" onclick="sendEmail(\'' + element.id + '\')"><i class="fa fa-download"></i> Download</button>';
 }
 
-//https://frankjprovenzano.com/resourses/images/08.jpg
+function sendEmail(e) {
 
-function goToForm(e) {
     photoName = e +'.jpg';
     url = 'https://frankjprovenzano.com/resourses/images/'+ e +'.jpg';
-    
-    location.href = 'emailForm.html?url='+url;
+
+    let email = prompt("Please enter your email address");
+
+    if (email != null || email != "") {
+        Email.send({
+            Host: "smtp.elasticemail.com",
+            Username: 'olga.cercalavoro@gmail.com',
+            Password: '05E505F6D8464F6EC37C43CBDC30B04134B3',
+            To : email, //quaranta.olga@gmail.com
+            From : "picture@frankjprovenzano.com",
+            Subject : "Test Email",
+            Body : "<html><h2>Hello</h2>This is the image you<strong>downloaded</strong>.</br></html>",
+            Attachments : [
+            {
+                name : photoName,
+                path : url
+            }]
+        })
+        .then(
+            message => alert(message)
+        );
+    }else
+    {
+        alert("Email not valid");
+    }
+
 }
+
