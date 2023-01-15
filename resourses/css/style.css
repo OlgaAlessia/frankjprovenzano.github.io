@@ -203,7 +203,7 @@ video {
   padding: 12px 30px;
 }
 
-.btn:hover{
+.buttonCaption:hover{
   background-image: linear-gradient(#464d55, #25292e);
 }
 
