@@ -15,7 +15,7 @@ jQuery(document).ready(function($) {
 });
 
 function createCaption(element) {
-    return  element.getElementsByTagName('img')[0].alt +'<button class="m-2 btn" onclick="sendEmail(\'' + element.id + '\')"><i class="fa fa-download"></i> Download</button>';
+    return  element.getElementsByTagName('img')[0].alt +'<button class="m-2 buttonCaption" onclick="sendEmail(\'' + element.id + '\')"><i class="fa fa-download"></i> Download</button>';
 }
 
 function sendEmail(photoName) {
