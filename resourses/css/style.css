@@ -236,10 +236,8 @@ video {
   color: red;
 }
 
-/** END Footer **/
-
-
 .button {
+  font-size: 16px;
   align-items: center;
   background-color: initial;
   background-image: linear-gradient(#464d55, #25292e);
@@ -273,10 +271,10 @@ video {
 .button:focus {
   box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
 }
+/** END Footer **/
 
 
 /*** MEDIA QUERY ***/
-
 @media (min-width: 768px) {
 
   html,
