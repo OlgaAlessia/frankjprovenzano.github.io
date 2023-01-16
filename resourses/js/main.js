@@ -2,6 +2,13 @@ var photoName = "";
 var url = "";
 
 jQuery(document).ready(function($) { 
+
+    $('#toTop').on('click', function(e) {
+        e.preventDefault();
+        $('html').animate( 
+            { scrollTop: '0' }, '5000');
+    });
+
     /*baguetteBox.run('.baguetteBox', { animation: 'fadeIn', noScrollbars: true, captions: createCaption });*/
 
     baguetteBox.run('.gallery-wrapper', {
@@ -9,13 +16,14 @@ jQuery(document).ready(function($) {
         captions: createCaption, // display image captions.
         noScrollbars: true,
         preload: 4,
-        animation: 'fadeIn', // fadeIn or slideIn
+        animation: 'slideIn', // fadeIn or slideIn
     });
     
 });
 
 function createCaption(element) {
-    return  element.getElementsByTagName('img')[0].alt +'<button class="m-2 buttonCaption" onclick="sendEmail(\'' + element.id + '\')"><i class="fa fa-download"></i> Download</button>';
+    return  element.getElementsByTagName('img')[0].alt +'<button class="m-2 btn buttonCaption" onclick="sendEmail(\'' + element.id + '\')"><i class="fa fa-download"></i> Download</button>';
+    //return  element.getElementsByTagName('img')[0].alt +'<button onclick="openPanel(\'' + element.id + '\')" type="button" class="m-2 btn buttonCaption" data-bs-toggle="modal" data-bs-target="#exampleModal">Download</button>';
 }
 
 function sendEmail(photoName) {
@@ -24,7 +32,10 @@ function sendEmail(photoName) {
 
     let email = prompt("Please enter your email address");
 
-    if (email != null || email != "") {
+    if (email == "") {
+        alert("The Email is not valid.");
+    }
+    if (email != null && email != "" ){
         Email.send({
             Host: "smtp.elasticemail.com",
             Username: 'picture@frankjprovenzano.com',
@@ -45,10 +56,7 @@ function sendEmail(photoName) {
             }
             else { alert(message); }
         });
-    }else
-    {
-        alert("Email not valid");
     }
-
 }
+
 
