@@ -3,6 +3,10 @@
 Version: 01/2023 */
 
 /* UTILS */
+html, body {
+  scroll-behavior: smooth;
+}
+
 html {
   height: 100%;
   box-sizing: border-box;
@@ -45,7 +49,8 @@ h1,
 
 .title h1{
   font-family: "Edwardian Script ITC" !important;
-  font-size: 4.5rem !important; 
+  font-size: 4.5rem !important;
+  margin-top: 1rem;
 }
 
 h2,
@@ -126,13 +131,10 @@ div#videoFrank {
 video {
   margin-top: 1rem;
 }
-
 /** TOP PART **/
 
 
-
 /** gridPicture **/
-
 .container .gallery-container {
   color: #35373a;
   min-height: 100vh;
@@ -217,7 +219,7 @@ video {
   width: 100%;
   bottom: 0;
   z-index: 10;
-  padding: 0.5rem;
+  padding: 1rem;
   background-color: white;
   text-align: center;
   color: black;
@@ -276,27 +278,27 @@ video {
 
 
 /** Animation **/
-/**.showOnScroll.fadeInDown {
+.showOnScroll.backInUp {
   opacity: 0;
-  -moz-transition: all 5s linear;
-  -webkit-transition: all 5s linear;
-  -o-transition: all 5s linear;
-  transition: all 5s linear;
-  -moz-transform: translateY(-50px);
-  -webkit-transform: translateY(-50px);
-  -o-transform: translateY(-50px);
-  -ms-transform: translateY(-50px);
-  transform: translateY(-50px);
-}*/
-/*
-.showOnScroll.fadeInDown.in-view {
+  -moz-transition: all 2s;
+  -webkit-transition: all 2s;
+  -o-transition: all 2s;
+  transition: all 2s;
+  -moz-transform: translate(0, 100px);
+  -webkit-transform: translate(0, 100px);
+  -o-transform: translate(0, 100px);
+  -ms-transform: translate(0, 100px);
+  transform: translate(0, 100px);
+}
+
+.showOnScroll.backInUp.in-view {
   opacity: 1;
-  -moz-transform: translateY(0);
-  -webkit-transform: translateY(0);
-  -o-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
-}*/
+  -moz-transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
 
 /*** END Animation ***/
 
@@ -306,7 +308,7 @@ video {
 
   html,
   body {
-    font-size: 17px;
+    font-size: 15px;
   }
 
   .button {
@@ -315,7 +317,16 @@ video {
 }
 
 
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+  
+  .title h1
+  {
+    font-size: 3.5rem !important;
+  }
+  video {
+    margin-top: 4rem;
+  }
+}
 
 @media (max-width: 991px) {}
 
