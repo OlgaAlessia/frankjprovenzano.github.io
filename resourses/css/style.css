@@ -41,14 +41,18 @@ em {
 
 h1,
 .h1 {
-  font-family: 'Arial', serif;
   font-weight: 700;
   font-size: 1.6rem;
   color: white !important;
 }
 
+@font-face {
+  font-family: "EdwardianScript";
+  src: url("https://frankjprovenzano.com/resourses/css/fonts/Edwardian_Script.ttf");
+}
+
 .title h1{
-  font-family: "Edwardian Script ITC" !important;
+  font-family: "EdwardianScript" !important;
   font-size: 4.5rem !important;
   margin-top: 1rem;
 }
