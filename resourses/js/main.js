@@ -34,11 +34,11 @@ jQuery(document).ready(function($) {
 
     function check_if_in_view() {
         var window_height = $window.height();
-        console.log('window_height= '+window_height);
+        //console.log('window_height= '+window_height);
         var window_top_position = $window.scrollTop();
-        console.log('window_top_position='+window_top_position);
+        //console.log('window_top_position='+window_top_position);
         var window_bottom_position = (window_top_position + window_height);
-        console.log('window_bottom_position='+window_bottom_position);
+        //console.log('window_bottom_position='+window_bottom_position);
         
         $.each($animation_elements, function() {
             

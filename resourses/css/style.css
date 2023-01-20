@@ -373,4 +373,8 @@ video {
 
 }
 
-@media (min-width: 1500px) {}
+@media (orientation: landscape){
+  #baguetteBox-overlay .full-image figcaption {
+    bottom: 0;
+  }
+}
