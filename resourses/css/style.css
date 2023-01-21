@@ -78,21 +78,6 @@ h4,
   color: #852890;
 }
 
-h5,
-.h5 {
-  font-weight: 400;
-  font-size: 0.75rem;
-  line-height: 1.25rem;
-  color: #852890;
-}
-
-h6,
-.h6 {
-  font-weight: 400;
-  font-size: 1.8rem;
-  color: #852890 !important;
-}
-
 a {
   color: #852890 !important;
   text-decoration: none !important;
@@ -310,7 +295,7 @@ video {
 /*** MEDIA QUERY ***/
 @media (max-width: 460px) {
   .footer .button{
-    margin: 5px;
+    margin: 10px 5px;
     font-size: 13px !important;
   }
 }
@@ -379,7 +364,7 @@ video {
   }
 
   .footer .button{
-    margin: 0 1rem 10px 1rem;
+    margin: 5px 1rem 15px 1rem;
   }
 
 }
