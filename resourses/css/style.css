@@ -112,7 +112,7 @@ a:active {
   top: 35%;
   bottom: 65%;
   left: 0;
-  margin: 20px;
+  margin: 5px;
 }
 
 .lateral_right{
@@ -121,7 +121,7 @@ a:active {
   top: 40%;
   bottom: 60%;
   right: 0;
-  padding: 20px;
+  padding: 5px;
 }
 
 /** TOP PART **/
