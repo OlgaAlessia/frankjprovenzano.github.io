@@ -54,9 +54,10 @@ h1,
 .title h1{
   font-family: "EdwardianScript" !important;
   font-size: 4.5rem !important;
-  margin: 1rem 0;
+  margin: 1rem 0px;
   line-height: unset;
 }
+
 
 h2,
 .h2 {
@@ -105,6 +106,24 @@ a:active {
   height: 0;
 }
 
+.lateral_left{
+  display: inline-block;
+  position: fixed;
+  top: 35%;
+  bottom: 65%;
+  left: 0;
+  margin: 20px;
+}
+
+.lateral_right{
+  display: inline-block;
+  position: fixed;
+  top: 40%;
+  bottom: 60%;
+  right: 0;
+  padding: 20px;
+}
+
 /** TOP PART **/
 .header {
   position: fixed;
@@ -114,14 +133,68 @@ a:active {
   background-color: #200b30;
 }
 
+.header h1{
+  font-size: 5rem !important;
+  margin: 2rem 0px;
+}
+
 div#videoFrank {
-  margin-top: 100px;
+  margin-top: 175px;
 }
 
 video {
   margin-top: 1rem;
 }
-/** TOP PART **/
+/** END TOP PART **/
+
+
+/** LATERAL BUTTONS **/
+.button {
+  font-size: 16px !important;
+  align-items: center;
+  background-color: initial !important;
+  background-image: linear-gradient(#464d55, #25292e);
+  border-radius: 8px !important;
+  border-width: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .1),0 3px 6px rgba(0, 0, 0, .05);
+  color: white !important;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: translate3d(0, 0, 0);
+  transition: all 150ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  touch-action: manipulation;
+  /*margin: 0 1rem 1rem;*/
+}
+
+.button .info{
+  display: flex;
+  justify-content: center;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
+.button:hover {
+  box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
+  background-image: linear-gradient(#852890, #4e1754);
+  color: white !important;
+  opacity: .85;
+}
+
+.button:active {
+  outline: 0;
+}
+
+.button:focus {
+  box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px !important;
+  outline: none;
+}
+
+/** END LATERAL BUTTONS **/
 
 
 /** gridPicture **/
@@ -209,11 +282,11 @@ video {
   width: 100%;
   bottom: 0;
   z-index: 10;
-  padding: 10px;
+  padding: 20px;
   background-color: white;
   text-align: center;
   color: black;
-  font-size: 13px;
+  font-size: 17px;
 }
 
 .footer a{
@@ -221,49 +294,13 @@ video {
 }
 
 .smallSize{
-  font-size: 13px !important;
+  font-size: 17px !important;
 }
 
 .fa-heart:before {
   color: red;
 }
 
-.button {
-  font-size: 16px !important;
-  align-items: center;
-  background-color: initial !important;
-  background-image: linear-gradient(#464d55, #25292e);
-  border-radius: 8px !important;
-  border-width: 0;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, .1),0 3px 6px rgba(0, 0, 0, .05);
-  color: white !important;
-  cursor: pointer;
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
-  transform: translate3d(0, 0, 0);
-  transition: all 150ms;
-  vertical-align: baseline;
-  white-space: nowrap;
-  touch-action: manipulation;
-  margin: 0 1rem 5px 1rem;
-}
-
-.button:hover {
-  box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
-  background-image: linear-gradient(#852890, #4e1754);
-  color: white !important;
-  opacity: .85;
-}
-
-.button:active {
-  outline: 0;
-}
-
-.button:focus {
-  box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px !important;
-  outline: none;
-}
 /** END Footer **/
 
 
@@ -323,6 +360,14 @@ video {
   }
   video {
     margin-top: 4rem;
+  }
+
+  .footer {
+    font-size: 13px;
+  }
+  
+  .smallSize{
+    font-size: 13px !important;
   }
 }
 
