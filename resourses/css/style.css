@@ -54,7 +54,8 @@ h1,
 .title h1{
   font-family: "EdwardianScript" !important;
   font-size: 4.5rem !important;
-  margin-top: 1rem;
+  margin: 1rem 0;
+  line-height: unset;
 }
 
 h2,
