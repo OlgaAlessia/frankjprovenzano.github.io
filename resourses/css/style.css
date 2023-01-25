@@ -124,6 +124,10 @@ a:active {
   padding: 5px;
 }
 
+.lateral_right .btn, .lateral_left .btn{
+  padding: 1px;
+}
+
 /** TOP PART **/
 .header {
   position: fixed;
