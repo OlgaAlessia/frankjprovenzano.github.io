@@ -2,23 +2,25 @@ var photoName = "";
 var url = "";
 
 jQuery(document).ready(function($) { 
+    console.log('window.width = '+ $( window ).width()+', window.innerWidth ='+window.innerWidth);
 
     $('#toTop').on('click', function(e) {
         e.preventDefault();
         $('html').animate( 
             { scrollTop: '0' }, '5000');
     });
-
-    $(window).scroll(function() {
-        if(window.innerHeight > window.innerWidth){
+    
+    if( (window.innerHeight > window.innerWidth) && (window.innerWidth > 500) ){
+        console.log('window.innerWidth ='+ window.innerWidth);
+        $(window).scroll(function() {
             //portrait
             if ($(window).scrollTop() > 1500) {
                 $('#toTop').addClass('show');
             } else {
                 $('#toTop').removeClass('show');
             }
-        }
-    });
+        });
+    }
 
     $('#toTop2').on('click', function(e) {
         e.preventDefault();
@@ -49,9 +51,7 @@ jQuery(document).ready(function($) {
 
     function check_if_in_view() {
         var window_height = $window.height();
-        //console.log('window_height= '+window_height);
         var window_top_position = $window.scrollTop();
-        //console.log('window_top_position='+window_top_position);
         var window_bottom_position = (window_top_position + window_height);
         //console.log('window_bottom_position='+window_bottom_position);
         
