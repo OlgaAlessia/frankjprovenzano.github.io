@@ -106,28 +106,6 @@ a:active {
   height: 0;
 }
 
-.lateral_left{
-  display: inline-block;
-  position: fixed;
-  top: 35%;
-  bottom: 65%;
-  left: 0;
-  margin: 5px;
-}
-
-.lateral_right{
-  display: inline-block;
-  position: fixed;
-  top: 40%;
-  bottom: 60%;
-  right: 0;
-  padding: 5px;
-}
-
-.lateral_right .btn, .lateral_left .btn{
-  padding: 1px !important;
-}
-
 /** TOP PART **/
 .header {
   position: fixed;
@@ -196,6 +174,28 @@ video {
 .button:focus {
   box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px !important;
   outline: none;
+}
+
+.lateral_left{
+  display: inline-block;
+  position: fixed;
+  top: 35%;
+  bottom: 65%;
+  left: 0;
+  margin: 5px;
+}
+
+.lateral_right{
+  display: inline-block;
+  position: fixed;
+  top: 40%;
+  bottom: 60%;
+  right: 0;
+  padding: 5px;
+}
+
+.lateral_right .btn, .lateral_left .btn {
+  padding: 1px !important;
 }
 
 /** END LATERAL BUTTONS **/
@@ -357,7 +357,9 @@ video {
 
 
 @media (max-width: 768px) {
-  
+  .header h1{
+    margin: 1rem 0px;
+  }
   .title h1
   {
     font-size: 3.5rem !important;
@@ -416,11 +418,43 @@ video {
   .footer .button{
     margin: 5px 1rem 15px 1rem;
   }
-
 }
 
 @media (orientation: landscape){
+ 
+  .lateral_left, .lateral_right{
+    visibility: hidden;
+  }
+  
+  div .cellbutton {
+    visibility: visible;
+  }
+
   #baguetteBox-overlay .full-image figcaption {
     bottom: 0;
+  }
+
+  .baguetteBox-button#close-button {
+    top: 2%;
+  }
+}
+
+@media (orientation: portrait){
+
+  .lateral_left, .lateral_right{
+    visibility: visible;
+  }
+
+  div .cellbutton {
+    visibility: hidden;
+    height: 0px;
+  }
+
+  .modal {
+    top: 30% !important;
+  }
+
+  .baguetteBox-button#close-button {
+    top: 15%;
   }
 }

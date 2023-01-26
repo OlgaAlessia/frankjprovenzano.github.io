@@ -43,7 +43,7 @@
     #baguetteBox-overlay .full-image figcaption {
       display: block;
       position: absolute;
-      bottom: 0;
+      /*bottom: 0;*/
       width: 100%;
       text-align: center;
       line-height: 1.8;
@@ -131,13 +131,13 @@
   -webkit-transition: background-color .4s ease;
   transition: background-color .4s ease; }
   .baguetteBox-button:focus, .baguetteBox-button:hover {
-    background-color: rgba(50, 50, 50, 0.9); }
+    background-color: rgba(50, 50, 50, 0.9); } /* rgba(50, 50, 50, 0.9); */
   .baguetteBox-button#next-button {
     right: 2%; }
   .baguetteBox-button#previous-button {
     left: 2%; }
   .baguetteBox-button#close-button {
-    top: 20px;
+    /*top: 15%;*/
     right: 2%;
     right: calc(2% + 6px);
     width: 30px;

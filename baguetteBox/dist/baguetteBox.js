@@ -29,22 +29,23 @@
               'stroke-linecap="butt" fill="none" stroke-linejoin="round"/>' +
             '</svg>',
         closeX = '<svg width="30" height="30">' +
-            '<g stroke="rgb(160,160,160)" stroke-width="4">' +
+            '<g stroke="red" stroke-width="4">' +
             '<line x1="5" y1="5" x2="25" y2="25"/>' +
             '<line x1="5" y1="25" x2="25" y2="5"/>' +
             '</g></svg>';
+
     // Global options and their defaults
     var options = {},
         defaults = {
             captions: true,
-            buttons: 'auto',
+            buttons: 'auto', // arrows navigation
             fullScreen: false,
-            noScrollbars: false,
+            noScrollbars: true,
             bodyClass: 'baguetteBox-open',
             titleTag: false,
             async: false,
             preload: 2,
-            animation: 'slideIn',
+            animation: 'slideIn', // fadeIn or slideIn
             afterShow: null,
             afterHide: null,
             onChange: null,
