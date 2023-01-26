@@ -9,7 +9,22 @@ jQuery(document).ready(function($) {
             { scrollTop: '0' }, '5000');
     });
 
-    /*baguetteBox.run('.baguetteBox', { animation: 'fadeIn', noScrollbars: true, captions: createCaption });*/
+    $(window).scroll(function() {
+        if(window.innerHeight > window.innerWidth){
+            //portrait
+            if ($(window).scrollTop() > 1500) {
+                $('#toTop').addClass('show');
+            } else {
+                $('#toTop').removeClass('show');
+            }
+        }
+    });
+
+    $('#toTop2').on('click', function(e) {
+        e.preventDefault();
+        $('html').animate( 
+            { scrollTop: '0' }, '5000');
+    });
 
     baguetteBox.run('.gallery-wrapper', {
         fullScreen: false,
@@ -61,10 +76,16 @@ jQuery(document).ready(function($) {
 
 function createCaption(element) {
     return  element.getElementsByTagName('img')[0].alt +'<button class="m-2 btn buttonCaption" onclick="sendEmail(\'' + element.id + '\')"><i class="fa fa-download"></i> Download</button>';
-    //return  element.getElementsByTagName('img')[0].alt +'<button onclick="openPanel(\'' + element.id + '\')" type="button" class="m-2 btn buttonCaption" data-bs-toggle="modal" data-bs-target="#exampleModal">Download</button>';
+    //return  element.getElementsByTagName('img')[0].alt +'<button onclick="openPanel(\'' + element.id + '\')" type="button" class="m-2 btn buttonCaption" data-toggle="modal" data-target="#downloadModal"><i class="fa fa-download"></i>Download</button>';
 }
-
-function sendEmail(photoName) {
+/*
+function openPanel(element){
+    photoName = element;
+    console.log("elemento passato = "+photoName);
+    $("#downloadModal").modal();
+}
+*/
+function sendEmail() {
 
     url = 'https://frankjprovenzano.com/resourses/images/'+ photoName;
 
@@ -81,7 +102,7 @@ function sendEmail(photoName) {
             To : email,
             From : "picture@frankjprovenzano.com",
             Subject : "Photo of Frank",
-            Body : "<html>Thank you for visiting the site. \n Attached you will find the photo you have selected.\n On behalf of the Provenzano's Family, we thank you for keeping Frank's memory alive. 🤟 </html>",
+            Body : "<html>Thank you for visiting the site. \n Attached you will find the photo you have selected.\n On behalf of the Provenzano's Family, we thank you for keeping Frank's memory alive. 🤟 \n</html>",
             Attachments : [
             {
                 name : photoName,

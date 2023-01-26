@@ -331,6 +331,15 @@ video {
   transform: translate(0, 0);
 }
 
+#toTop {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#toTop.show {
+  opacity: 1;
+  visibility: visible;
+}
 /*** END Animation ***/
 
 
@@ -365,7 +374,7 @@ video {
     font-size: 3.5rem !important;
   }
   video {
-    margin-top: 4rem;
+    margin-top: 1rem;
   }
 
   .footer {
@@ -420,7 +429,7 @@ video {
   }
 }
 
-@media (orientation: landscape){
+@media screen and (orientation: landscape){
  
   .lateral_left, .lateral_right{
     visibility: hidden;
@@ -439,7 +448,7 @@ video {
   }
 }
 
-@media (orientation: portrait){
+@media (min-width:500px) and (orientation: portrait){
 
   .lateral_left, .lateral_right{
     visibility: visible;
