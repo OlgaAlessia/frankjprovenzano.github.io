@@ -2,8 +2,6 @@ var photoName = "";
 var url = "";
 
 jQuery(document).ready(function($) { 
-    console.log('window.width = '+ $( window ).width()+', window.innerWidth ='+window.innerWidth);
-
     $('#toTop').on('click', function(e) {
         e.preventDefault();
         $('html').animate( 
@@ -11,7 +9,6 @@ jQuery(document).ready(function($) {
     });
     
     if( (window.innerHeight > window.innerWidth) && (window.innerWidth > 600) ){
-        console.log('window.innerWidth ='+ window.innerWidth);
         $(window).scroll(function() {
             //portrait
             if ($(window).scrollTop() > 1200) {
