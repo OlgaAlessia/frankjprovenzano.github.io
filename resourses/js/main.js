@@ -85,7 +85,7 @@ function openPanel(element){
     $("#downloadModal").modal();
 }
 */
-function sendEmail() {
+function sendEmail(photoName) {
 
     url = 'https://frankjprovenzano.com/resourses/images/'+ photoName;
 
