@@ -431,7 +431,7 @@ video {
 
 @media screen and (orientation: landscape){
  
-  .lateral_left, .lateral_right{
+  .lateral_left, .lateral_right, #sharePhoto{
     visibility: hidden;
   }
   
@@ -448,7 +448,7 @@ video {
   }
 }
 
-@media (min-width:500px) and (orientation: portrait){
+@media screen and (orientation: portrait){
 
   .lateral_left, .lateral_right, #sharePhoto{
     visibility: visible;
@@ -467,3 +467,15 @@ video {
     top: 15%;
   }
 }
+
+@media (min-width: 0px) and (max-width: 500px) and (orientation: portrait){
+  .lateral_left, .lateral_right, #sharePhoto{
+    visibility: hidden;
+  }
+  
+  div .cellbutton {
+    visibility: visible;
+  }
+}
+
+/*(min-width: 500px)*/
