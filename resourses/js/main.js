@@ -10,11 +10,11 @@ jQuery(document).ready(function($) {
             { scrollTop: '0' }, '5000');
     });
     
-    if( (window.innerHeight > window.innerWidth) && (window.innerWidth > 500) ){
+    if( (window.innerHeight > window.innerWidth) && (window.innerWidth > 600) ){
         console.log('window.innerWidth ='+ window.innerWidth);
         $(window).scroll(function() {
             //portrait
-            if ($(window).scrollTop() > 1500) {
+            if ($(window).scrollTop() > 1200) {
                 $('#toTop').addClass('show');
             } else {
                 $('#toTop').removeClass('show');
