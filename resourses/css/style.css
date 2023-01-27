@@ -374,7 +374,7 @@ video {
     font-size: 3.5rem !important;
   }
   video {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
   }
 
   .footer {
@@ -437,6 +437,7 @@ video {
   
   div .cellbutton {
     visibility: visible;
+    height: auto;
   }
 
   #baguetteBox-overlay .full-image figcaption {
@@ -477,5 +478,3 @@ video {
     visibility: visible;
   }
 }
-
-/*(min-width: 500px)*/
