@@ -450,7 +450,7 @@ video {
 
 @media (min-width:500px) and (orientation: portrait){
 
-  .lateral_left, .lateral_right{
+  .lateral_left, .lateral_right, #sharePhoto{
     visibility: visible;
   }
 
