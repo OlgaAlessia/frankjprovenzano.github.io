@@ -2,16 +2,31 @@ var photoName = "";
 var url = "";
 
 jQuery(document).ready(function($) { 
+
+    // Button Back to Top on the right //
     $('#toTop').on('click', function(e) {
         e.preventDefault();
         $('html').animate( 
             { scrollTop: '0' }, '5000');
     });
+
+    window.addEventListener("resize", function() {
+        if ( (window.innerHeight > window.innerWidth) && (window.innerWidth > 500) ) {
+            // Portrait Mode
+            $('#toTop').addClass('show');
+
+        } else {
+            // Landscape Mode
+            $('#toTop').removeClass('show');
+        }
+    }, false);
     
+
     if( (window.innerHeight > window.innerWidth) && (window.innerWidth > 500) ){
+        //$('#sharePhoto').css({"visibility":"visible"});
         $(window).scroll(function() {
-            //portrait
-            if ($(window).scrollTop() > 1200) {
+            // Portrait
+            if ($(window).scrollTop() > 1500) {
                 $('#toTop').addClass('show');
             } else {
                 $('#toTop').removeClass('show');
@@ -19,12 +34,14 @@ jQuery(document).ready(function($) {
         });
     }
 
+    // Button Back to Top in footer //
     $('#toTop2').on('click', function(e) {
         e.preventDefault();
         $('html').animate( 
             { scrollTop: '0' }, '5000');
     });
 
+    // BaguetteBox Gallery  //
     baguetteBox.run('.gallery-wrapper', {
         fullScreen: false,
         captions: createCaption, // display image captions.
@@ -50,7 +67,6 @@ jQuery(document).ready(function($) {
         var window_height = $window.height();
         var window_top_position = $window.scrollTop();
         var window_bottom_position = (window_top_position + window_height);
-        //console.log('window_bottom_position='+window_bottom_position);
         
         $.each($animation_elements, function() {
             
@@ -78,6 +94,7 @@ function createCaption(element) {
 function sendEmail(photoName) {
 
     url = 'https://frankjprovenzano.com/resourses/images/'+ photoName;
+
     let email = prompt("Please enter your email address");
 
     if (email == "") {
