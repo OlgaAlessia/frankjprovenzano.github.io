@@ -8,7 +8,7 @@ jQuery(document).ready(function($) {
             { scrollTop: '0' }, '5000');
     });
     
-    if( (window.innerHeight > window.innerWidth) && (window.innerWidth > 600) ){
+    if( (window.innerHeight > window.innerWidth) && (window.innerWidth > 500) ){
         $(window).scroll(function() {
             //portrait
             if ($(window).scrollTop() > 1200) {
@@ -73,19 +73,11 @@ jQuery(document).ready(function($) {
 
 function createCaption(element) {
     return  element.getElementsByTagName('img')[0].alt +'<button class="m-2 btn buttonCaption" onclick="sendEmail(\'' + element.id + '\')"><i class="fa fa-download"></i> Download</button>';
-    //return  element.getElementsByTagName('img')[0].alt +'<button onclick="openPanel(\'' + element.id + '\')" type="button" class="m-2 btn buttonCaption" data-toggle="modal" data-target="#downloadModal"><i class="fa fa-download"></i>Download</button>';
 }
-/*
-function openPanel(element){
-    photoName = element;
-    console.log("elemento passato = "+photoName);
-    $("#downloadModal").modal();
-}
-*/
+
 function sendEmail(photoName) {
 
     url = 'https://frankjprovenzano.com/resourses/images/'+ photoName;
-
     let email = prompt("Please enter your email address");
 
     if (email == "") {
