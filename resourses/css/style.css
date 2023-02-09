@@ -476,5 +476,6 @@ video {
   
   div .cellbutton {
     visibility: visible;
+    height: auto;
   }
 }
